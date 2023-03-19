@@ -62,8 +62,12 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         viewModel.postDatas.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        viewModel.postDatas[section]?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -74,8 +78,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? HomeCollectionViewCell else {
             return UICollectionViewListCell(frame: .zero)
         }
-        cell.subtitleView.text = viewModel.postDatas[indexPath.row].body
-        cell.titleView.text = viewModel.postDatas[indexPath.row].title
+        cell.subtitleView.text = viewModel.postDatas[indexPath.section]?[indexPath.row].body
+        cell.titleView.text = viewModel.postDatas[indexPath.section]?[indexPath.row].title
         return cell
     }
     
@@ -83,7 +87,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as? HomeCollectionViewHeaderView else {
             return UICollectionReusableView()
         }
-        sectionHeader.label.text = "TRENDING"
+        
+        if let userId = viewModel.postDatas[indexPath.section]?[0].userId {
+            sectionHeader.label.text = "User ID: \(userId)"
+        }
         
         return sectionHeader
     }

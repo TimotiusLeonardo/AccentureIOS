@@ -51,7 +51,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
         ]
         NSLayoutConstraint.activate(collectionViewContraints)
         
-        contentView.backgroundColor = .gray
+        contentView.backgroundColor = .lightGray
         contentView.layer.cornerRadius = 8
     }
     

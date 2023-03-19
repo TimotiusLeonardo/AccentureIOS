@@ -30,8 +30,9 @@ class HomeCollectionViewHeaderView: UICollectionReusableView {
     override func layoutSubviews() {
         super.layoutSubviews()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        
         label.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20).isActive = true
         label.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        label.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
 }

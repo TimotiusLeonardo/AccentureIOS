@@ -14,7 +14,7 @@ class HomeViewModel {
     }()
     
     var reloadDataSource: (() -> Void)
-    var postDatas: [HomeModel] = [] {
+    var postDatas: [Int: [HomeModel]] = [:] {
         didSet {
             reloadDataSource()
         }
@@ -30,8 +30,20 @@ class HomeViewModel {
                 print(error ?? "Error Home Get Data")
                 return
             }
-            
-            self?.postDatas = data
+            self?.restructureData(data: data)
+        }
+    }
+    
+    private func restructureData(data: [HomeModel]) {
+        for _data in data {
+            guard let userId = _data.userId else { continue }
+            if postDatas[userId] == nil {
+                postDatas[userId] = []
+                postDatas[userId]?.append(_data)
+                continue
+            }
+            // if the data exist, append it straight away
+            postDatas[userId]?.append(_data)
         }
     }
 }
