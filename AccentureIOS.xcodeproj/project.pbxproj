@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		FFF32C6E29C70CD40034C5FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C6D29C70CD40034C5FF /* AppDelegate.swift */; };
 		FFF32C7029C70CD40034C5FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C6F29C70CD40034C5FF /* SceneDelegate.swift */; };
-		FFF32C7229C70CD40034C5FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C7129C70CD40034C5FF /* ViewController.swift */; };
-		FFF32C7529C70CD40034C5FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF32C7329C70CD40034C5FF /* Main.storyboard */; };
+		FFF32C7229C70CD40034C5FF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C7129C70CD40034C5FF /* HomeViewController.swift */; };
 		FFF32C7729C70CD50034C5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF32C7629C70CD50034C5FF /* Assets.xcassets */; };
 		FFF32C7A29C70CD50034C5FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF32C7829C70CD50034C5FF /* LaunchScreen.storyboard */; };
+		FFF32C8429C70DA50034C5FF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C8329C70DA50034C5FF /* HomeViewModel.swift */; };
+		FFF32C8A29C714F40034C5FF /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C8929C714F40034C5FF /* HomeModel.swift */; };
+		FFF32C8D29C716590034C5FF /* HttpRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C8C29C716590034C5FF /* HttpRequestHelper.swift */; };
+		FFF32C9029C716AF0034C5FF /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C8F29C716AF0034C5FF /* HomeService.swift */; };
+		FFF32C9429C71D3F0034C5FF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C9329C71D3F0034C5FF /* HomeCollectionViewCell.swift */; };
+		FFF32C9629C74F1A0034C5FF /* CommentFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C9529C74F1A0034C5FF /* CommentFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FFF32C6A29C70CD40034C5FF /* AccentureIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccentureIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF32C6D29C70CD40034C5FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFF32C6F29C70CD40034C5FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FFF32C7129C70CD40034C5FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FFF32C7429C70CD40034C5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFF32C7129C70CD40034C5FF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FFF32C7629C70CD50034C5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFF32C7929C70CD50034C5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFF32C7B29C70CD50034C5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFF32C8329C70DA50034C5FF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FFF32C8929C714F40034C5FF /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		FFF32C8C29C716590034C5FF /* HttpRequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestHelper.swift; sourceTree = "<group>"; };
+		FFF32C8F29C716AF0034C5FF /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		FFF32C9329C71D3F0034C5FF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFF32C9529C74F1A0034C5FF /* CommentFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,76 @@
 		FFF32C6C29C70CD40034C5FF /* AccentureIOS */ = {
 			isa = PBXGroup;
 			children = (
+				FFF32C8E29C716910034C5FF /* Services */,
+				FFF32C8B29C716400034C5FF /* Helper */,
+				FFF32C8129C70D650034C5FF /* Modules */,
 				FFF32C6D29C70CD40034C5FF /* AppDelegate.swift */,
 				FFF32C6F29C70CD40034C5FF /* SceneDelegate.swift */,
-				FFF32C7129C70CD40034C5FF /* ViewController.swift */,
-				FFF32C7329C70CD40034C5FF /* Main.storyboard */,
 				FFF32C7629C70CD50034C5FF /* Assets.xcassets */,
 				FFF32C7829C70CD50034C5FF /* LaunchScreen.storyboard */,
 				FFF32C7B29C70CD50034C5FF /* Info.plist */,
 			);
 			path = AccentureIOS;
+			sourceTree = "<group>";
+		};
+		FFF32C8129C70D650034C5FF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FFF32C8229C70D6D0034C5FF /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FFF32C8229C70D6D0034C5FF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FFF32C8729C70DEF0034C5FF /* ViewModel */,
+				FFF32C8629C70DEB0034C5FF /* View */,
+				FFF32C8529C70DE30034C5FF /* Model */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FFF32C8529C70DE30034C5FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFF32C8929C714F40034C5FF /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFF32C8629C70DEB0034C5FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFF32C7129C70CD40034C5FF /* HomeViewController.swift */,
+				FFF32C9329C71D3F0034C5FF /* HomeCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFF32C8729C70DEF0034C5FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFF32C8329C70DA50034C5FF /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFF32C8B29C716400034C5FF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FFF32C8C29C716590034C5FF /* HttpRequestHelper.swift */,
+				FFF32C9529C74F1A0034C5FF /* CommentFlowLayout.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		FFF32C8E29C716910034C5FF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FFF32C8F29C716AF0034C5FF /* HomeService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +198,6 @@
 			files = (
 				FFF32C7A29C70CD50034C5FF /* LaunchScreen.storyboard in Resources */,
 				FFF32C7729C70CD50034C5FF /* Assets.xcassets in Resources */,
-				FFF32C7529C70CD40034C5FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +208,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFF32C7229C70CD40034C5FF /* ViewController.swift in Sources */,
+				FFF32C9029C716AF0034C5FF /* HomeService.swift in Sources */,
+				FFF32C7229C70CD40034C5FF /* HomeViewController.swift in Sources */,
+				FFF32C8D29C716590034C5FF /* HttpRequestHelper.swift in Sources */,
 				FFF32C6E29C70CD40034C5FF /* AppDelegate.swift in Sources */,
 				FFF32C7029C70CD40034C5FF /* SceneDelegate.swift in Sources */,
+				FFF32C8A29C714F40034C5FF /* HomeModel.swift in Sources */,
+				FFF32C8429C70DA50034C5FF /* HomeViewModel.swift in Sources */,
+				FFF32C9429C71D3F0034C5FF /* HomeCollectionViewCell.swift in Sources */,
+				FFF32C9629C74F1A0034C5FF /* CommentFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FFF32C7329C70CD40034C5FF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FFF32C7429C70CD40034C5FF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FFF32C7829C70CD50034C5FF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +360,6 @@
 				INFOPLIST_FILE = AccentureIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +387,6 @@
 				INFOPLIST_FILE = AccentureIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
