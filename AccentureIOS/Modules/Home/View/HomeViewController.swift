@@ -14,8 +14,10 @@ class HomeViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.sectionInset = .init(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = .init(width: view.frame.size.width/1.2,
-                                height: 80)
+        layout.minimumInteritemSpacing = 16
+        layout.estimatedItemSize = CGSize(width: view.frame.size.width/1.2, height: 50)
+        layout.headerReferenceSize = .init(width: view.frame.size.width,
+                                           height: 35)
         return layout
     }()
     
@@ -25,6 +27,7 @@ class HomeViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.register(HomeCollectionViewCell.self,
                                 forCellWithReuseIdentifier: "Cell")
+        collectionView.register(HomeCollectionViewHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
@@ -63,6 +66,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         viewModel.postDatas.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 40)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? HomeCollectionViewCell else {
             return UICollectionViewListCell(frame: .zero)
@@ -70,6 +77,15 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.subtitleView.text = viewModel.postDatas[indexPath.row].body
         cell.titleView.text = viewModel.postDatas[indexPath.row].title
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as? HomeCollectionViewHeaderView else {
+            return UICollectionReusableView()
+        }
+        sectionHeader.label.text = "TRENDING"
+        
+        return sectionHeader
     }
 }
 

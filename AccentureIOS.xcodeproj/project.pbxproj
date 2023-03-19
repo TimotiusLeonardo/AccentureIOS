@@ -18,6 +18,7 @@
 		FFF32C9029C716AF0034C5FF /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C8F29C716AF0034C5FF /* HomeService.swift */; };
 		FFF32C9429C71D3F0034C5FF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C9329C71D3F0034C5FF /* HomeCollectionViewCell.swift */; };
 		FFF32C9629C74F1A0034C5FF /* CommentFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C9529C74F1A0034C5FF /* CommentFlowLayout.swift */; };
+		FFF32C9829C752B30034C5FF /* HomeCollectionViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32C9729C752B30034C5FF /* HomeCollectionViewHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FFF32C8F29C716AF0034C5FF /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		FFF32C9329C71D3F0034C5FF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFF32C9529C74F1A0034C5FF /* CommentFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentFlowLayout.swift; sourceTree = "<group>"; };
+		FFF32C9729C752B30034C5FF /* HomeCollectionViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				FFF32C7129C70CD40034C5FF /* HomeViewController.swift */,
 				FFF32C9329C71D3F0034C5FF /* HomeCollectionViewCell.swift */,
+				FFF32C9729C752B30034C5FF /* HomeCollectionViewHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				FFF32C8D29C716590034C5FF /* HttpRequestHelper.swift in Sources */,
 				FFF32C6E29C70CD40034C5FF /* AppDelegate.swift in Sources */,
 				FFF32C7029C70CD40034C5FF /* SceneDelegate.swift in Sources */,
+				FFF32C9829C752B30034C5FF /* HomeCollectionViewHeaderView.swift in Sources */,
 				FFF32C8A29C714F40034C5FF /* HomeModel.swift in Sources */,
 				FFF32C8429C70DA50034C5FF /* HomeViewModel.swift in Sources */,
 				FFF32C9429C71D3F0034C5FF /* HomeCollectionViewCell.swift in Sources */,
